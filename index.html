@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>河內塔</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="topbar" aria-label="遊戲設定">
+        <div>
+          <h1>河內塔</h1>
+          <p>選一個圓盤，再選目標柱。全部移到任一其他柱子即可完成。</p>
+        </div>
+
+        <div class="controls">
+          <label for="diskCount">圓盤數量</label>
+          <select id="diskCount" aria-label="選擇圓盤數量"></select>
+          <label class="toggle">
+            <input id="teacherMode" type="checkbox">
+            <span>教師模式</span>
+          </label>
+          <button id="restartButton" type="button">重新開始</button>
+        </div>
+      </section>
+
+      <section class="status" aria-live="polite">
+        <div>
+          <span class="status-label">步數</span>
+          <strong id="moveCount">0</strong>
+        </div>
+        <div>
+          <span class="status-label">最佳步數</span>
+          <strong id="bestCount">1</strong>
+        </div>
+        <div class="message" id="message">從左柱開始，把圓盤移到中柱或右柱。</div>
+      </section>
+
+      <section class="board" aria-label="河內塔遊戲區">
+        <button class="tower" type="button" data-tower="0" aria-label="左柱"></button>
+        <button class="tower" type="button" data-tower="1" aria-label="中柱"></button>
+        <button class="tower" type="button" data-tower="2" aria-label="右柱"></button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
